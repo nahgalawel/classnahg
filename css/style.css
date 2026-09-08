@@ -398,3 +398,61 @@ hr {
 #single_cls_content_container p[style*="color:#64748b"] {
     font-weight: 600 !important;
 }
+
+/* ============================================================
+   التعديل 1: تغيير خط الأسئلة والإجابات إلى Tahoma Bold بحجم أكبر
+   ============================================================ */
+#form_new_ask *,
+#add_ask_here * {
+    font-family: 'Tahoma', 'Arial', 'Noto Sans Arabic', sans-serif !important;
+    font-weight: 700 !important;
+    font-size: 1.1rem !important;
+}
+
+/* استثناء الأزرار داخل مناطق الأسئلة (تبقى بخط Cairo الأصلي وحجمها الطبيعي) */
+#form_new_ask .btn-edit,
+#form_new_ask .btn-delete,
+#form_new_ask .desine-btn,
+#add_ask_here .btn-edit,
+#add_ask_here .btn-delete,
+#add_ask_here .desine-btn {
+    font-family: 'Cairo', 'Tajawal', sans-serif !important;
+    font-weight: 800 !important;
+    font-size: 0.95rem !important;
+}
+
+/* ============================================================
+   التعديل 2: خلفية فاتحة مميزة لصندوق السؤال الواحد
+   ============================================================ */
+.question_box {
+    background: #f0f7ff !important;          /* خلفية زرقاء فاتحة جداً */
+    border-radius: 16px !important;
+    padding: 20px 18px !important;
+    margin-bottom: 20px !important;
+    border: 1.5px solid #dbeafe !important;  /* حد بنفس درجة الخلفية */
+    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.08) !important;
+    transition: all 0.2s ease;
+}
+
+/* تأثير تمرير الماوس فوق الصندوق */
+.question_box:hover {
+    box-shadow: 0 6px 20px rgba(79, 70, 229, 0.15) !important;
+    border-color: #bfdbfe !important;
+}
+
+/* ============================================================
+   التعديل 3: تحسين مظهر حقول الإدخال داخل صندوق السؤال
+   ============================================================ */
+.question_box .inputAskAuto,
+.question_box .desine-input-text,
+.question_box .inputMyApp {
+    background: #ffffff !important;
+    border-color: #d1d5db !important;
+}
+
+.question_box .inputAskAuto:focus,
+.question_box .desine-input-text:focus,
+.question_box .inputMyApp:focus {
+    border-color: #4f46e5 !important; /* اللون البنفسجي الأساسي */
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15) !important;
+}
